@@ -1,0 +1,345 @@
+/* === EL AMIGO - PÁGINA DE PRODUCTOS === */
+
+/* === INTRODUCCIÓN === */
+.introduccion-productos {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #B8B8B8;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* === TARJETAS DE PRODUCTOS === */
+.tarjeta-producto {
+    min-width: 0;
+    background-color: rgba(13, 13, 13, 0.90);
+    padding: 15px;
+    border: 1px solid #6C2BFF;
+    border-radius: 10px;
+    text-align: center;
+    transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+/* === TARJETA BOOTSTRAP === */
+.tarjeta-producto .card {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+}
+
+/* === EFECTO HOVER === */
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    border-color: #FF2BD6;
+    box-shadow: 0 0 15px rgba(255, 43, 214, 0.25);
+}
+
+/* === IMAGEN DEL PRODUCTO === */
+.tarjeta-producto figure {
+    margin: 0;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid #6C2BFF;
+    border-radius: 8px;
+}
+
+/* === NOMBRE DEL PRODUCTO === */
+.tarjeta-producto figcaption {
+    min-height: 48px;
+    margin-top: 15px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+/* === CONTENIDO DE LA TARJETA === */
+.tarjeta-producto .card-body {
+    padding: 15px 0 5px;
+}
+
+/* === DESCRIPCIÓN === */
+.tarjeta-producto .card-body > p:not(.precio-producto) {
+    min-height: 85px;
+    margin: 0;
+    color: #B8B8B8;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* === PRECIO === */
+.tarjeta-producto .precio-producto {
+    margin-top: 15px;
+    color: #00FF88;
+    font-size: 22px;
+}
+
+/* === BORDES SUPERIORES DE LAS TARJETAS === */
+.tarjeta-producto:nth-child(1) {
+    border-top: 3px solid #6C2BFF;
+}
+
+.tarjeta-producto:nth-child(2) {
+    border-top: 3px solid #00A8FF;
+}
+
+.tarjeta-producto:nth-child(3) {
+    border-top: 3px solid #FF2BD6;
+}
+
+.tarjeta-producto:nth-child(4) {
+    border-top: 3px solid #6C2BFF;
+}
+
+.tarjeta-producto:nth-child(5) {
+    border-top: 3px solid #00A8FF;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+
+    .tarjeta-producto {
+        padding: 12px;
+    }
+
+    .tarjeta-producto img {
+        height: 200px;
+    }
+
+    .tarjeta-producto figcaption {
+        font-size: 16px;
+    }
+
+    .tarjeta-producto .precio-producto {
+        font-size: 20px;
+    }
+}
+
+/* === CELULAR === */
+@media (max-width: 480px) {
+
+    .tarjeta-producto img {
+        height: 220px;
+    }
+
+    .tarjeta-producto figcaption {
+        font-size: 17px;
+    }
+
+    .tarjeta-producto .card-body > p:not(.precio-producto) {
+        min-height: auto;
+    }
+}
+
+/* === FILTROS DE PRODUCTOS === */
+.filtros-games {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto 25px;
+    padding: 15px;
+    background-color: rgba(13, 13, 13, 0.90);
+    border: 1px solid #6C2BFF;
+    border-radius: 8px;
+}
+
+.filtros-games label {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.filtros-games input,
+.filtros-games select {
+    padding: 8px 10px;
+    background-color: #151515;
+    color: #FFFFFF;
+    border: 1px solid #6C2BFF;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.filtros-games input {
+    width: 230px;
+}
+
+.filtros-games input:focus,
+.filtros-games select:focus {
+    outline: none;
+    border-color: #FF2BD6;
+    box-shadow: 0 0 6px rgba(255, 43, 214, 0.35);
+}
+
+.filtros-games button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+#btn-filtrar-productos {
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+}
+
+#btn-limpiar-productos {
+    background-color: #6C2BFF;
+    color: #FFFFFF;
+}
+
+.filtros-games button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(255, 43, 214, 0.35);
+}
+
+@media (max-width: 480px) {
+
+    .filtros-games input {
+        width: 100%;
+    }
+}
+
+/* === EFECTO MOUSEOVER === */
+.tarjeta-producto.producto-hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease;
+}
+
+/* === MODAL DE PRODUCTOS === */
+.modal-producto {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow-y: auto;
+}
+
+/* === CONTENIDO DEL MODAL === */
+.modal-producto-contenido {
+    position: relative;
+    width: min(650px, 95vw);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+    background-color: #0D0D0D;
+    border: 2px solid #6C2BFF;
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(108, 43, 255, 0.45);
+    animation: aparecer-modal-producto 0.25s ease;
+}
+
+/* === IMAGEN DEL MODAL === */
+.modal-producto-contenido img {
+    width: 100%;
+    max-width: 520px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #6C2BFF;
+    border-radius: 7px;
+}
+
+/* === TÍTULO DEL MODAL === */
+.modal-producto-contenido h2 {
+    margin: 18px 0 10px;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+/* === DESCRIPCIÓN DEL MODAL === */
+.modal-producto-contenido .modal-descripcion-producto {
+    max-width: 560px;
+    margin: 15px auto;
+    color: #B8B8B8;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* === PRECIO DEL MODAL === */
+.modal-producto-contenido .modal-precio-producto {
+    margin-top: 18px;
+    color: #00FF88;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* === BOTÓN CERRAR === */
+.modal-producto-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 35px;
+    cursor: pointer;
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+.modal-producto-cerrar:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(255, 43, 214, 0.5);
+}
+
+/* === ANIMACIÓN DEL MODAL === */
+@keyframes aparecer-modal-producto {
+
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === RESPONSIVE DEL MODAL === */
+@media (max-width: 600px) {
+
+    .modal-producto {
+        padding: 10px;
+    }
+
+    .modal-producto-contenido {
+        padding: 20px 15px;
+    }
+
+    .modal-producto-contenido img {
+        height: 220px;
+    }
+
+    .modal-producto-contenido h2 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,424 @@
+/* EL AMIGO - PÁGINA GAMES */
+
+/* === INTRODUCCIÓN === */
+.introduccion-games {
+    max-width: 650px;
+    margin: 0 auto 20px;
+    color: #B8B8B8;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* === FILTROS === */
+.filtros-games {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: rgba(13, 13, 13, .90);
+    border: 1px solid #6C2BFF;
+    border-radius: 8px;
+}
+
+.filtros-games label {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.filtros-games input,
+.filtros-games select {
+    padding: 8px 10px;
+    background-color: #151515;
+    color: #FFF;
+    border: 1px solid #6C2BFF;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.filtros-games input {
+    width: 230px;
+}
+
+.filtros-games input:focus,
+.filtros-games select:focus {
+    outline: none;
+    border-color: #FF2BD6;
+    box-shadow: 0 0 6px rgba(255, 43, 214, .35);
+}
+
+.filtros-games button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+#btn-filtrar {
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+}
+
+#btn-limpiar {
+    background-color: #6C2BFF;
+    color: #FFF;
+}
+
+.filtros-games button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(255, 43, 214, .35);
+}
+
+/* === TARJETAS DE JUEGOS === */
+.games {
+    min-width: 0;
+    background-color: rgba(13, 13, 13, .94);
+    padding: 15px;
+    border: 1px solid #6C2BFF;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.games .card {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+}
+
+.games:hover {
+    transform: translateY(-4px);
+    border-color: #FF2BD6;
+    box-shadow: 0 0 12px rgba(255, 43, 214, .25);
+}
+
+.games figure {
+    margin: 0;
+}
+
+.games img {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 1px solid #6C2BFF;
+    border-radius: 6px;
+}
+
+.games figcaption {
+    min-height: 42px;
+    margin-top: 10px;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.games .plataforma {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 4px 8px;
+    background-color: #6C2BFF;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.games > p:not(.precio-games) {
+    min-height: 65px;
+    margin: 8px 0;
+    color: #B8B8B8;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.games .precio-games {
+    margin: 12px 0 0;
+    color: #00FF88;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* === DESCUENTO === */
+.games .precio-anterior {
+    color: #777;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.games .descuento {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 3px 5px;
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.games .precio-oferta {
+    color: #00FF88;
+    font-size: 18px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 500px) {
+
+    .filtros-games {
+        flex-direction: column;
+    }
+
+    .filtros-games input {
+        width: 100%;
+    }
+}
+
+/* === EFECTO MOUSEOVER === */
+.games.juego-hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease;
+}
+
+/* === PRODUCTOS CARGADOS CON FETCH API === */
+.productos-dinamicos {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(13, 13, 13, .90);
+    border: 1px solid #00A8FF;
+    border-radius: 8px;
+}
+
+.productos-dinamicos h3 {
+    color: #00A8FF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contenedor-productos-api {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.producto-api {
+    padding: 15px;
+    background-color: rgba(21, 21, 21, .95);
+    border: 1px solid #6C2BFF;
+    border-radius: 8px;
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.producto-api:hover {
+    transform: translateY(-4px);
+    border-color: #FF2BD6;
+}
+
+.producto-api img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #0D0D0D;
+    border-radius: 5px;
+}
+
+.producto-api h4 {
+    color: #FFF;
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+.producto-api p {
+    font-size: 14px;
+}
+
+.producto-api .precio-api {
+    color: #FF2BD6;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.producto-api .precio-anterior {
+    color: #777;
+    font-size: 12px;
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+
+.producto-api .descuento {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 3px 5px;
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.producto-api .precio-oferta {
+    color: #00FF88;
+    font-size: 18px;
+}
+
+.mensaje-api {
+    text-align: center;
+    color: #B8B8B8;
+}
+
+/* === MODAL DE JUEGOS === */
+.modal-juego {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, .85);
+    overflow-y: auto;
+}
+
+.modal-juego-contenido {
+    position: relative;
+    width: min(650px, 95vw);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 25px;
+    background-color: #0D0D0D;
+    border: 2px solid #6C2BFF;
+    border-radius: 10px;
+    color: #FFF;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(108, 43, 255, .45);
+    animation: aparecer-modal .25s ease;
+}
+
+.modal-juego-contenido img {
+    width: 100%;
+    max-width: 520px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #6C2BFF;
+    border-radius: 7px;
+}
+
+.modal-juego-contenido h2 {
+    margin: 18px 0 10px;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.modal-juego-contenido .modal-plataforma {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    background-color: #6C2BFF;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.modal-juego-contenido .modal-descripcion {
+    margin: 15px auto;
+    max-width: 560px;
+    color: #B8B8B8;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modal-juego-contenido .modal-precio {
+    margin-top: 18px;
+    color: #00FF88;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-juego-contenido .precio-anterior {
+    color: #777;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.modal-juego-contenido .descuento {
+    display: inline-block;
+    margin: 0 6px;
+    padding: 3px 6px;
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.modal-juego-contenido .precio-oferta {
+    color: #00FF88;
+    font-size: 20px;
+}
+
+.modal-juego-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 35px;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.modal-juego-cerrar:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(255, 43, 214, .5);
+}
+
+@keyframes aparecer-modal {
+    from {
+        opacity: 0;
+        transform: scale(.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === RESPONSIVE DEL MODAL === */
+@media (max-width: 600px) {
+
+    .modal-juego {
+        padding: 10px;
+    }
+
+    .modal-juego-contenido {
+        padding: 20px 15px;
+    }
+
+    .modal-juego-contenido img {
+        height: 220px;
+    }
+
+    .modal-juego-contenido h2 {
+        font-size: 20px;
+    }
+}

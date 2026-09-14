@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El Amigo, tienda gamer de videojuegos, accesorios y productos para tu experiencia de juego.">
+    <title>El Amigo - Tu mundo gamer</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="inicio-pagina">
+
+<header>
+    <h1 id="top">El Amigo</h1>
+    <img src="https://cdn-icons-png.flaticon.com/512/5542/5542421.png" alt="Logotipo de El Amigo, tienda gamer" width="200">
+    <p>
+        Tu tienda de videojuegos, consolas y accesorios favoritos.
+        Encuentra los mejores títulos para disfrutar de tus juegos.
+    </p>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-elamigo" aria-label="Navegación principal">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">🎮 El Amigo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú de navegación">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="producto.html">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main id="inicio" class="inicio-contenido">
+
+    <!-- Hero principal de la tienda -->
+    <section class="hero-inicio" aria-labelledby="titulo-hero">
+        <div class="hero-contenido">
+            <span class="etiqueta-hero">🎮 EL AMIGO GAMER</span>
+            <h2 id="titulo-hero">TODO PARA<br><span>TU MUNDO GAMER</span></h2>
+            <p>Juegos, accesorios y más, todo en un solo lugar.</p>
+            <a class="btn-neon-principal" href="producto.html">VER PRODUCTOS →</a>
+        </div>
+        <div class="hero-beneficios" aria-label="Beneficios principales">
+            <div><span>🎮</span><strong>JUEGA</strong><small>Explora y disfruta</small></div>
+            <div><span>★</span><strong>CALIDAD</strong><small>Productos seleccionados</small></div>
+            <div><span>🚚</span><strong>DESPACHO</strong><small>A todo Chile</small></div>
+        </div>
+    </section>
+
+    <!-- Ofertas principales -->
+    <section class="bloque-inicio ofertas-inicio" aria-labelledby="titulo-ofertas">
+        <div class="encabezado-bloque">
+            <div>
+                <h2 id="titulo-ofertas">🔥 OFERTAS DE LA SEMANA</h2>
+                <p>Aprovecha estos descuentos por tiempo limitado.</p>
+            </div>
+            <a href="games.html">Ver videojuegos →</a>
+        </div>
+
+        <div class="ofertas-grid">
+            <article class="oferta-card">
+                <span class="badge-descuento">15% OFF</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GW6-EVZcN9ilJVxquL890ravy2187EPN6MTpKkUFZw&s=10" alt="The Legend of Zelda: Tears of the Kingdom">
+                <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+                <p>Nintendo Switch</p>
+                <span class="precio-anterior-inicio">$49.990</span>
+                <strong class="precio-oferta-inicio">$42.490</strong>
+            </article>
+
+            <article class="oferta-card">
+                <span class="badge-descuento">15% OFF</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwOtZQhGp2dfJ1_Kabe175o7b8mmj2vopVGp2xyr8A2SyHlwHxfftKxUQ&s=10" alt="EA Sports FC">
+                <h3>EA Sports FC</h3>
+                <p>PS5</p>
+                <span class="precio-anterior-inicio">$39.990</span>
+                <strong class="precio-oferta-inicio">$33.990</strong>
+            </article>
+
+            <article class="oferta-card">
+                <span class="badge-descuento">15% OFF</span>
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202407/0401/670c294ded3baf4fa11068db2ec6758c63f7daeb266a35a1.png?w=440" alt="Minecraft">
+                <h3>Minecraft</h3>
+                <p>PS5</p>
+                <span class="precio-anterior-inicio">$29.990</span>
+                <strong class="precio-oferta-inicio">$25.490</strong>
+            </article>
+        </div>
+    </section>
+
+    <!-- Accesos rápidos a las categorías del catálogo -->
+    <section class="bloque-inicio categorias-inicio" aria-labelledby="titulo-categorias">
+        <div class="encabezado-bloque">
+            <div>
+                <h2 id="titulo-categorias">🎮 EXPLORA NUESTRAS CATEGORÍAS</h2>
+                <p>Encuentra exactamente lo que necesitas.</p>
+            </div>
+        </div>
+        <div class="categorias-grid">
+            <a class="categoria-card categoria-teclados" href="producto.html?categoria=teclados">
+                <span>⌨️</span><div><h3>TECLADOS</h3><small>Ver teclados →</small></div>
+            </a>
+            <a class="categoria-card categoria-audifonos" href="producto.html?categoria=audifonos">
+                <span>🎧</span><div><h3>AUDÍFONOS</h3><small>Ver audífonos →</small></div>
+            </a>
+            <a class="categoria-card categoria-mouse" href="producto.html?categoria=mouse">
+                <span>🖱️</span><div><h3>MOUSE</h3><small>Ver mouse →</small></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Acceso al catálogo de videojuegos -->
+    <section class="games-banner-inicio" aria-labelledby="titulo-games-inicio">
+        <div>
+            <span class="etiqueta-hero">🎮 CATÁLOGO GAMER</span>
+            <h2 id="titulo-games-inicio">SUMÉRGETE EN <span>NUEVOS MUNDOS</span></h2>
+            <p>Descubre videojuegos para distintas plataformas y encuentra tu próxima aventura.</p>
+            <a class="btn-neon-principal" href="games.html">VER VIDEOJUEGOS →</a>
+        </div>
+    </section>
+
+    <!-- Beneficios de la tienda -->
+    <section class="bloque-inicio beneficios-inicio" aria-labelledby="titulo-beneficios">
+        <div class="encabezado-bloque">
+            <div>
+                <h2 id="titulo-beneficios">💎 ¿POR QUÉ COMPRAR EN EL AMIGO?</h2>
+                <p>Una experiencia pensada para gamers.</p>
+            </div>
+        </div>
+        <div class="beneficios-grid">
+            <article><span>🚚</span><h3>Despacho rápido</h3><p>A todo Chile</p></article>
+            <article><span>🛡️</span><h3>Compra segura</h3><p>Tus datos protegidos</p></article>
+            <article><span>💳</span><h3>Pago seguro</h3><p>Múltiples medios de pago</p></article>
+            <article><span>🎮</span><h3>Productos originales</h3><p>Las mejores marcas</p></article>
+            <article><span>🔧</span><h3>Soporte especializado</h3><p>Te ayudamos cuando lo necesites</p></article>
+        </div>
+    </section>
+
+    <!-- Interacción JavaScript para demostrar manipulación del DOM -->
+    <section class="recomendacion-inicio" aria-labelledby="titulo-recomendacion">
+        <div class="recomendacion-texto">
+            <span class="icono-recomendacion">💡</span>
+            <div>
+                <h2 id="titulo-recomendacion">¿NECESITAS AYUDA PARA ELEGIR?</h2>
+                <p>Presiona el botón y te mostraremos una recomendación.</p>
+                <button type="button" id="btn-recomendacion" class="btn-neon-principal">MOSTRAR RECOMENDACIÓN</button>
+            </div>
+        </div>
+        <div id="resultado-recomendacion" class="resultado-recomendacion" aria-live="polite">
+            <p>Tu recomendación aparecerá aquí.</p>
+        </div>
+    </section>
+
+    <!-- Llamado a contacto -->
+    <section class="contacto-inicio" aria-labelledby="titulo-contacto-inicio">
+        <div>
+            <span>💬</span>
+            <div>
+                <h2 id="titulo-contacto-inicio">¿TIENES ALGUNA PREGUNTA?</h2>
+                <p>Nuestro equipo está listo para ayudarte.</p>
+            </div>
+        </div>
+        <a class="btn-neon-principal" href="contacto.html">CONTÁCTANOS →</a>
+    </section>
+
+</main>
+
+<footer id="pie">
+    <p>🎮 <strong>ElAmigo</strong> - Tu mundo gamer</p>
+    <p>Juegos, accesorios y más, todo en un solo lugar.</p>
+    <p>Síguenos: <a href="#" aria-label="Instagram de ElAmigo">Instagram</a> · <a href="#" aria-label="TikTok de ElAmigo">TikTok</a> · <a href="#" aria-label="YouTube de ElAmigo">YouTube</a></p>
+    <p>&copy; 2026 ElAmigo. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

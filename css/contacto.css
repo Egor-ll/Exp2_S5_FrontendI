@@ -1,0 +1,242 @@
+/* ==== EL AMIGO - PÁGINA DE CONTACTO ===== */
+
+
+/* ==== CONTENEDOR PRINCIPAL === */
+
+#contacto {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* ==== SECCIÓN DE CONTACTO ==== */
+
+#contacto section {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(13, 13, 13, 0.92);
+    padding: 30px;
+    border: 1px solid #6C2BFF;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+}
+
+
+/* ==== TÍTULO === */
+
+#titulo-contacto {
+    margin-top: 0;
+    color: #00A8FF;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+/* ==== DESCRIPCIÓN ===== */
+
+.introduccion-contacto {
+    margin-bottom: 30px;
+    color: #B8B8B8;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+/* === FORMULARIO ==== */
+
+#contacto form {
+    width: 100%;
+}
+
+/* ==== FIELDSET === */
+
+#contacto fieldset {
+    margin: 0;
+    padding: 25px;
+    border: 1px solid rgba(108, 43, 255, 0.7);
+    border-radius: 8px;
+}
+
+/* === LEGEND ==== */
+
+#contacto legend {
+    width: auto;
+    padding: 0 10px;
+    color: #FF2BD6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* === ETIQUETAS BOOTSTRAP ==== */
+
+#contacto .form-label {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+/* ==== CAMPOS DE FORMULARIO BOOTSTRAP ====== */
+
+#contacto .form-control,
+#contacto .form-select {
+    background-color: #151515;
+    color: #FFFFFF;
+    border: 1px solid #6C2BFF;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    transition:
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+
+/* Placeholder */
+
+#contacto .form-control::placeholder {
+    color: #777777;
+}
+
+
+/* ===== FOCUS ==== */
+
+#contacto .form-control:focus,
+#contacto .form-select:focus {
+
+    background-color: #151515;
+    color: #FFFFFF;
+    border-color: #FF2BD6;
+    box-shadow:
+            0 0 8px rgba(255, 43, 214, 0.35);
+}
+
+
+/* ==== TEXTAREA ==== */
+
+#contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* === RADIO Y CHECKBOX == */
+
+#contacto .form-check {
+    margin-bottom: 8px;
+}
+
+#contacto .form-check-label {
+    color: #B8B8B8;
+    cursor: pointer;
+}
+
+
+#contacto .form-check-input {
+    background-color: #151515;
+    border: 1px solid #6C2BFF;
+    cursor: pointer;
+}
+
+
+/* Color personalizado */
+
+#contacto .form-check-input:checked {
+    background-color: #FF2BD6;
+    border-color: #FF2BD6;
+}
+
+/* === BOTONES == */
+
+.botones-formulario {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+/* Botones generales */
+
+.botones-formulario .btn {
+    padding: 11px 25px;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+
+/* ==== BOTÓN ENVIAR  === */
+
+.botones-formulario .btn-enviar {
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+}
+
+.botones-formulario .btn-enviar:hover {
+    background-color: #FF2BD6;
+    color: #0D0D0D;
+    transform: translateY(-2px);
+    box-shadow:
+            0 0 12px rgba(255, 43, 214, 0.4);
+}
+
+
+/* ==== BOTÓN RESTABLECER ===== */
+
+.botones-formulario .btn-restablecer {
+    background-color: #6C2BFF;
+    color: #FFFFFF;
+}
+
+.botones-formulario .btn-restablecer:hover {
+    background-color: #6C2BFF;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow:
+            0 0 12px rgba(108, 43, 255, 0.4);
+}
+
+
+/* ===== RESPONSIVE ====== */
+
+@media (max-width: 600px) {
+
+    #contacto section {
+        padding: 20px;
+    }
+    #contacto fieldset {
+        padding: 18px;
+    }
+    .botones-formulario {
+        flex-direction: column;
+    }
+    .botones-formulario .btn {
+        width: 100%;
+    }
+}
+/* === MENSAJES DINÁMICOS DEL FORMULARIO === */
+
+.mensaje-formulario {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensaje-formulario.exito {
+    background-color: rgba(0, 168, 255, 0.15);
+    border: 1px solid #00A8FF;
+    color: #00A8FF;
+}
+
+.mensaje-formulario.error {
+    background-color: rgba(255, 43, 214, 0.15);
+    border: 1px solid #FF2BD6;
+    color: #FF2BD6;
+}
