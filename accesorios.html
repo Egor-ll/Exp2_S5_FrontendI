@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Productos disponibles en El Amigo, tienda de videojuegos.">
-
-    <title>Productos - El Amigo</title>
+    <meta name="description" content="Accesorios disponibles en El Amigo, tienda de videojuegos.">
+    <title>Accesorios - El Amigo</title>
 
     <!-- Estilos propios -->
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/producto.css">
+    <link rel="stylesheet" href="css/accesorios.css">
 
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-
 <header>
-
     <h1 id="top">El Amigo</h1>
 
     <img src="https://cdn-icons-png.flaticon.com/512/5542/5542421.png"
@@ -33,16 +26,11 @@
         Tu tienda de videojuegos, consolas y accesorios favoritos.
         Encuentra los mejores títulos para disfrutar de tus juegos.
     </p>
-
 </header>
 
-
 <!-- Barra de navegación principal -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-elamigo"
-     aria-label="Navegación principal">
-
+<nav class="navbar navbar-expand-lg navbar-dark navbar-elamigo" aria-label="Navegación principal">
     <div class="container">
-
         <!-- Nombre de la tienda -->
         <a class="navbar-brand" href="index.html">
             🎮 El Amigo
@@ -56,16 +44,12 @@
                 aria-controls="menuPrincipal"
                 aria-expanded="false"
                 aria-label="Mostrar menú de navegación">
-
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
         <!-- Menú de navegación -->
         <div class="collapse navbar-collapse" id="menuPrincipal">
-
             <ul class="navbar-nav ms-auto">
-
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">
                         Inicio
@@ -74,9 +58,9 @@
 
                 <li class="nav-item">
                     <a class="nav-link active"
-                       aria-current="page"
-                       href="producto.html">
-                        Productos
+                       href="accesorios.html"
+                       aria-current="page">
+                        Accesorios
                     </a>
                 </li>
 
@@ -91,22 +75,15 @@
                         Contacto
                     </a>
                 </li>
-
             </ul>
-
         </div>
-
     </div>
-
 </nav>
 
-
-<main id="producto">
-
+<main id="accesorios">
     <section aria-labelledby="titulo-productos">
-
         <h2 id="titulo-productos">
-            Nuestros productos
+            Nuestros accesorios
         </h2>
 
         <p class="introduccion-productos">
@@ -114,65 +91,43 @@
             Encuentra teclados, audífonos y mouse para complementar
             tu experiencia de juego.
         </p>
-
-
-
-        <!-- Filtro de productos por nombre y categoría -->
-        <div class="filtros-games filtros-productos">
-
-            <label for="buscador-productos">
-                Buscar producto:
-            </label>
-
-            <input
-                    type="search"
-                    id="buscador-productos"
-                    placeholder="Escribe el nombre de un producto..."
-            >
-
-            <label for="filtro-categoria">
-                Categoría:
-            </label>
-
-            <select id="filtro-categoria">
-
-                <option value="todas">
-                    Todas
-                </option>
-
-                <option value="teclados">
-                    Teclados
-                </option>
-
-                <option value="audifonos">
-                    Audífonos
-                </option>
-
-                <option value="mouse">
-                    Mouse
-                </option>
-
-            </select>
-
-            <button type="button" id="btn-filtrar-productos">
-                Filtrar
+        <div class="dropdown categoria-accesorios">
+            <button class="btn btn-categoria dropdown-toggle"
+                    type="button"
+                    id="btn-categoria"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                Categoría
             </button>
 
-            <button type="button" id="btn-limpiar-productos">
-                Limpiar filtros
-            </button>
-
+            <ul class="dropdown-menu" aria-labelledby="btn-categoria">
+                <li>
+                    <a class="dropdown-item" href="accesorios.html">
+                        Todos
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="accesorios.html?categoria=teclados">
+                        ⌨️ Teclados
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="accesorios.html?categoria=audifonos">
+                        🎧 Audífonos
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="accesorios.html?categoria=mouse">
+                        🖱️ Mouse
+                    </a>
+                </li>
+            </ul>
         </div>
-
-
-        <div class="container">
+<div class="container">
             <div class="row g-4">
-
-
                 <!-- Producto 1 -->
                 <article class="col-12 col-md-6 col-lg-4 tarjeta-producto" data-categoria="mouse">
                     <div class="card h-100">
-
                         <figure>
                             <img src="https://progaming.cl/wp-content/uploads/2026/08/new-project-2026-08-18t171012210-c3091158-22b8-4510-9df9-7382c91403fe.jpg"
                                  alt="Mouse Redragon Prism Pro M997-PRO-1K Wireless">
@@ -180,8 +135,8 @@
                             <figcaption>
                                 Mouse Redragon Prism Pro M997-PRO-1K Wireless
                             </figcaption>
-
                         </figure>
+
                         <div class="card-body">
                             <p>
                                 El Redragon Prism Pro M997-PRO-1K es un mouse gamer
@@ -193,17 +148,16 @@
                                 <strong>$72.440</strong>
                             </p>
 
+                            <button type="button" class="btn-agregar-carrito">
+                                🛒 Agregar al carrito
+                            </button>
                         </div>
-
                     </div>
-
                 </article>
-
 
                 <!-- Producto 2 -->
                 <article class="col-12 col-md-6 col-lg-4 tarjeta-producto" data-categoria="mouse">
                     <div class="card h-100">
-
                         <figure>
                             <img src="https://progaming.cl/wp-content/uploads/2025/06/new-project-2025-06-10t103702833-c78aa3c7-c543-4bd9-9539-c75865597901.jpg"
                                  alt="Mouse Gamer Razer Cobra Pro 30000dpi">
@@ -211,10 +165,9 @@
                             <figcaption>
                                 Mouse Gamer Razer Cobra Pro 30000dpi
                             </figcaption>
-
                         </figure>
-                        <div class="card-body">
 
+                        <div class="card-body">
                             <p>
                                 Vive una experiencia unica con este nuevo mouse
                                 de última generación.
@@ -224,17 +177,16 @@
                                 <strong>$33.990</strong>
                             </p>
 
+                            <button type="button" class="btn-agregar-carrito">
+                                🛒 Agregar al carrito
+                            </button>
                         </div>
-
                     </div>
-
                 </article>
-
 
                 <!-- Producto 3 -->
                 <article class="col-12 col-md-6 col-lg-4 tarjeta-producto" data-categoria="teclados">
                     <div class="card h-100">
-
                         <figure>
                             <img src="https://progaming.cl/wp-content/uploads/2024/11/1-a16a071a-7697-4fbe-ae6f-1b9550cfecee.png"
                                  alt="Teclado Gamer Razer Ornata V3 Español RGB Membrana">
@@ -242,10 +194,9 @@
                             <figcaption>
                                 Teclado Gamer Razer Ornata V3 Español RGB Membrana
                             </figcaption>
-
                         </figure>
-                        <div class="card-body">
 
+                        <div class="card-body">
                             <p>
                                 El Razer Ornata V3 es un teclado mecánico
                                 custom de formato TKL con una construcción
@@ -260,16 +211,16 @@
                                 <strong>$25.490</strong>
                             </p>
 
+                            <button type="button" class="btn-agregar-carrito">
+                                🛒 Agregar al carrito
+                            </button>
                         </div>
                     </div>
-
                 </article>
-
 
                 <!-- Producto 4 -->
                 <article class="col-12 col-md-6 col-lg-4 tarjeta-producto" data-categoria="teclados">
                     <div class="card h-100">
-
                         <figure>
                             <img src="https://progaming.cl/wp-content/uploads/2026/07/new-project-2026-07-29t134940505-30e7f6ce-f79e-4dc5-bb75-1d9b1136b3e5.jpg"
                                  alt="Teclado Inalámbrico Fantech MK921 MAXFIT8 White Switch White">
@@ -280,7 +231,6 @@
                         </figure>
 
                         <div class="card-body">
-
                             <p>
                                 Personalización Infinita: QMK Firmware y Soporte VIA.
                                 Construcción Gasket Mount, Sockets Hot-Swap del Sur
@@ -293,28 +243,26 @@
                                 <strong>$44.990</strong>
                             </p>
 
+                            <button type="button" class="btn-agregar-carrito">
+                                🛒 Agregar al carrito
+                            </button>
                         </div>
                     </div>
-
                 </article>
-
 
                 <!-- Producto 5 -->
                 <article class="col-12 col-md-6 col-lg-4 tarjeta-producto" data-categoria="audifonos">
                     <div class="card h-100">
-
                         <figure>
-
                             <img src="https://progaming.cl/wp-content/uploads/2024/11/107rz00131_1-8a9bf1b1-6925-4543-8501-99792498de86-e638928e-5fb2-4cca-b973-bc343470f0fe.jpg"
                                  alt="Audífonos Razer Blackshark V2 Hyperspeed">
 
                             <figcaption>
                                 Audífonos Razer Blackshark V2 Hyperspeed
                             </figcaption>
-
                         </figure>
-                        <div class="card-body">
 
+                        <div class="card-body">
                             <p>
                                 Consigue la comodidad ininterrumpida que necesitas
                                 para el juego competitivo todo el día con los
@@ -327,24 +275,74 @@
                                 <strong>$39.990</strong>
                             </p>
 
+                            <button type="button" class="btn-agregar-carrito">
+                                🛒 Agregar al carrito
+                            </button>
                         </div>
                     </div>
-
                 </article>
-
-
             </div>
-
         </div>
-
     </section>
-
 </main>
 
+<!-- Carrito flotante: permanece oculto hasta agregar un producto -->
+<aside id="carrito-flotante" class="carrito-flotante oculto" aria-label="Carrito de compras">
+    <div class="carrito-header">
+        <h2>🛒 Mi carrito</h2>
+
+        <button type="button"
+                id="btn-minimizar-carrito"
+                class="btn-minimizar-carrito"
+                aria-label="Minimizar carrito">
+            −
+        </button>
+    </div>
+
+    <div id="lista-carrito" class="lista-carrito">
+        <p id="carrito-vacio">
+            Tu carrito está vacío.
+        </p>
+    </div>
+
+    <div class="resumen-carrito">
+        <span>
+            Total:
+        </span>
+
+        <strong id="total-carrito">
+            $0
+        </strong>
+
+        <button
+                type="button"
+                id="btn-ir-pagar"
+                class="btn-ir-pagar"
+        >
+            Pagar
+        </button>
+
+        <button
+                type="button"
+                id="btn-limpiar-carrito"
+                class="btn-limpiar-carrito"
+        >
+            Limpiar
+        </button>
+    </div>
+</aside>
+
+<!-- Botón circular que aparece cuando el carrito está minimizado -->
+<button type="button"
+        id="btn-carrito-minimizado"
+        class="btn-carrito-minimizado oculto"
+        aria-label="Abrir carrito">
+    🛒
+    <span id="cantidad-carrito">0</span>
+</button>
 
 <!-- Pie de página -->
 <footer id="pie">
-
     <p>
         El Amigo - Tienda de Videojuegos
     </p>
@@ -358,7 +356,6 @@
     </p>
 
     <ul>
-
         <li>
             <a href="#" aria-label="Facebook de El Amigo">
                 Facebook
@@ -376,22 +373,16 @@
                 TikTok
             </a>
         </li>
-
     </ul>
 
     <p>
         &copy; 2026 El Amigo. Todos los derechos reservados.
     </p>
-
 </footer>
 
-
-
-<script src="js/producto.js"></script>
+<script src="js/accesorios.js"></script>
 
 <!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>

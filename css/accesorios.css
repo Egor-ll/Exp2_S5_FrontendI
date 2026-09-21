@@ -1,22 +1,260 @@
 /* =========================================
-   EL AMIGO - PÁGINA GAMES
+   EL AMIGO - PÁGINA DE ACCESORIOS
    ========================================= */
 
 /* =========================================
    INTRODUCCIÓN
    ========================================= */
 
-.introduccion-games {
-    max-width: 650px;
-    margin: 0 auto 20px;
+.introduccion-productos {
+    max-width: 700px;
+    margin: 0 auto 30px;
     color: #B8B8B8;
     text-align: center;
+    line-height: 1.6;
+}
+
+/* =========================================
+   BOTÓN DE CATEGORÍA
+   ========================================= */
+
+.categoria-accesorios {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 30px;
+}
+
+.btn-categoria {
+    min-width: 130px;
+    padding: 9px 18px;
+    border: 2px solid #6C2BFF;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #FFFFFF !important;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+            transform 0.3s ease,
+            background-color 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+.btn-categoria:hover,
+.btn-categoria:focus {
+    background-color: #6C2BFF;
+    color: #FFFFFF;
+    border-color: #6C2BFF;
+    box-shadow: 0 0 12px rgba(108, 43, 255, 0.45);
+    transform: translateY(-2px);
+}
+
+.categoria-accesorios .dropdown-menu {
+    min-width: 180px;
+    margin-top: 5px;
+    padding: 6px;
+    background-color: #0D0D0D;
+    border: 1px solid #6C2BFF;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(108, 43, 255, 0.25);
+}
+
+.categoria-accesorios .dropdown-item {
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.categoria-accesorios .dropdown-item:hover,
+.categoria-accesorios .dropdown-item:focus {
+    background-color: #6C2BFF;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   TARJETAS DE PRODUCTOS
+   ========================================= */
+
+.tarjeta-producto {
+    min-width: 0;
+    padding: 15px;
+    background-color: rgba(13, 13, 13, 0.90);
+    border: 1px solid #6C2BFF;
+    border-radius: 10px;
+    text-align: center;
+    transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+/* Tarjeta interna de Bootstrap. */
+.tarjeta-producto .card {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+}
+
+/* Efecto visual al pasar el mouse. */
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    border-color: #FF2BD6;
+    box-shadow: 0 0 15px rgba(255, 43, 214, 0.25);
+}
+
+/* =========================================
+   IMAGEN DEL PRODUCTO
+   ========================================= */
+
+.tarjeta-producto figure {
+    margin: 0;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid #6C2BFF;
+    border-radius: 8px;
+}
+
+/* =========================================
+   NOMBRE DEL PRODUCTO
+   ========================================= */
+
+.tarjeta-producto figcaption {
+    min-height: 48px;
+    margin-top: 15px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+/* =========================================
+   CONTENIDO DE LA TARJETA
+   ========================================= */
+
+.tarjeta-producto .card-body {
+    padding: 15px 0 5px;
+}
+
+/* Descripción del producto. */
+.tarjeta-producto .card-body > p:not(.precio-producto) {
+    min-height: 85px;
+    margin: 0;
+    color: #B8B8B8;
     font-size: 14px;
     line-height: 1.5;
 }
 
+/* Precio del producto. */
+.tarjeta-producto .precio-producto {
+    margin-top: 15px;
+    color: #FF2BD6;
+    font-size: 22px;
+}
+
 /* =========================================
-   FILTROS
+   BOTÓN AGREGAR AL CARRITO
+   ========================================= */
+
+.btn-agregar-carrito {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid #00E5FF;
+    border-radius: 8px;
+    color: #00E5FF;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #00E5FF;
+    color: #111111;
+    box-shadow:
+            0 0 8px #00E5FF,
+            0 0 18px #00E5FF;
+    transform: translateY(-2px);
+}
+
+.btn-agregar-carrito:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   BORDES SUPERIORES DE LAS TARJETAS
+   ========================================= */
+
+.tarjeta-producto:nth-child(1) {
+    border-top: 3px solid #6C2BFF;
+}
+
+.tarjeta-producto:nth-child(2) {
+    border-top: 3px solid #00A8FF;
+}
+
+.tarjeta-producto:nth-child(3) {
+    border-top: 3px solid #FF2BD6;
+}
+
+.tarjeta-producto:nth-child(4) {
+    border-top: 3px solid #6C2BFF;
+}
+
+.tarjeta-producto:nth-child(5) {
+    border-top: 3px solid #00A8FF;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+   ========================================= */
+
+@media (max-width: 768px) {
+    .tarjeta-producto {
+        padding: 12px;
+    }
+
+    .tarjeta-producto img {
+        height: 200px;
+    }
+
+    .tarjeta-producto figcaption {
+        font-size: 16px;
+    }
+
+    .tarjeta-producto .precio-producto {
+        font-size: 20px;
+    }
+}
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 480px) {
+    .tarjeta-producto img {
+        height: 220px;
+    }
+
+    .tarjeta-producto figcaption {
+        font-size: 17px;
+    }
+
+    .tarjeta-producto .card-body > p:not(.precio-producto) {
+        min-height: auto;
+    }
+}
+
+/* =========================================
+   FILTROS DE PRODUCTOS
    ========================================= */
 
 .filtros-games {
@@ -25,7 +263,7 @@
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
     padding: 15px;
     background-color: rgba(13, 13, 13, 0.90);
     border: 1px solid #6C2BFF;
@@ -72,12 +310,12 @@
             box-shadow 0.2s ease;
 }
 
-#btn-filtrar {
+#btn-filtrar-productos {
     background-color: #FF2BD6;
     color: #0D0D0D;
 }
 
-#btn-limpiar {
+#btn-limpiar-productos {
     background-color: #6C2BFF;
     color: #FFFFFF;
 }
@@ -87,155 +325,7 @@
     box-shadow: 0 0 10px rgba(255, 43, 214, 0.35);
 }
 
-/* =========================================
-   TARJETAS DE JUEGOS
-   ========================================= */
-
-.games {
-    min-width: 0;
-    padding: 15px;
-    background-color: rgba(13, 13, 13, 0.94);
-    border: 1px solid #6C2BFF;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    transition:
-            transform 0.25s ease,
-            border-color 0.25s ease,
-            box-shadow 0.25s ease;
-}
-
-.games .card {
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    color: #FFFFFF;
-}
-
-.games:hover {
-    transform: translateY(-4px);
-    border-color: #FF2BD6;
-    box-shadow: 0 0 12px rgba(255, 43, 214, 0.25);
-}
-
-.games figure {
-    margin: 0;
-}
-
-.games img {
-    width: 100%;
-    max-width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border: 1px solid #6C2BFF;
-    border-radius: 6px;
-}
-
-.games figcaption {
-    min-height: 42px;
-    margin-top: 10px;
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.3;
-    text-align: center;
-}
-
-.games .plataforma {
-    display: inline-block;
-    margin: 8px 0;
-    padding: 4px 8px;
-    background-color: #6C2BFF;
-    color: #FFFFFF;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.games > p:not(.precio-games) {
-    min-height: 65px;
-    margin: 8px 0;
-    color: #B8B8B8;
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-.games .precio-games {
-    margin: 12px 0 0;
-    color: #00FF88;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* =========================================
-   DESCUENTO
-   ========================================= */
-
-.games .precio-anterior {
-    color: #777777;
-    font-size: 12px;
-    text-decoration: line-through;
-}
-
-.games .descuento {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 3px 5px;
-    background-color: #FF2BD6;
-    color: #0D0D0D;
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: bold;
-}
-
-.games .precio-oferta {
-    color: #FF2BD6;
-    font-size: 18px;
-}
-
-/* =========================================
-   BOTÓN AGREGAR AL CARRITO
-   ========================================= */
-
-.games .btn-agregar-carrito,
-.producto-api .btn-agregar-carrito {
-    width: 100%;
-    margin-top: 12px;
-    padding: 10px 15px;
-    background-color: transparent;
-    border: 2px solid #00E5FF;
-    border-radius: 8px;
-    color: #00E5FF;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.games .btn-agregar-carrito:hover,
-.producto-api .btn-agregar-carrito:hover {
-    background-color: #00E5FF;
-    color: #111111;
-    box-shadow:
-            0 0 8px #00E5FF,
-            0 0 18px #00E5FF;
-    transform: translateY(-2px);
-}
-
-.games .btn-agregar-carrito:active,
-.producto-api .btn-agregar-carrito:active {
-    transform: translateY(0);
-}
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-
-@media (max-width: 500px) {
-    .filtros-games {
-        flex-direction: column;
-    }
-
+@media (max-width: 480px) {
     .filtros-games input {
         width: 100%;
     }
@@ -245,107 +335,16 @@
    EFECTO MOUSEOVER
    ========================================= */
 
-.games.juego-hover {
+.tarjeta-producto.producto-hover {
     transform: translateY(-5px);
     transition: transform 0.2s ease;
 }
 
 /* =========================================
-   PRODUCTOS CARGADOS CON FETCH API
+   MODAL DE PRODUCTOS
    ========================================= */
 
-.productos-dinamicos {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: rgba(13, 13, 13, 0.90);
-    border: 1px solid #00A8FF;
-    border-radius: 8px;
-}
-
-.productos-dinamicos h3 {
-    margin-bottom: 20px;
-    color: #00A8FF;
-    text-align: center;
-}
-
-#contenedor-productos-api {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.producto-api {
-    padding: 15px;
-    background-color: rgba(21, 21, 21, 0.95);
-    border: 1px solid #6C2BFF;
-    border-radius: 8px;
-    transition:
-            transform 0.2s ease,
-            border-color 0.2s ease;
-}
-
-.producto-api:hover {
-    transform: translateY(-4px);
-    border-color: #FF2BD6;
-}
-
-.producto-api img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    background-color: #0D0D0D;
-    border-radius: 5px;
-}
-
-.producto-api h4 {
-    margin-top: 12px;
-    color: #FFFFFF;
-    font-size: 17px;
-}
-
-.producto-api p {
-    font-size: 14px;
-}
-
-.producto-api .precio-api {
-    color: #FF2BD6;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.producto-api .precio-anterior {
-    margin-right: 5px;
-    color: #777777;
-    font-size: 12px;
-    text-decoration: line-through;
-}
-
-.producto-api .descuento {
-    display: inline-block;
-    margin: 0 5px;
-    padding: 3px 5px;
-    background-color: #FF2BD6;
-    color: #0D0D0D;
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: bold;
-}
-
-.producto-api .precio-oferta {
-    color: #FF2BD6;
-    font-size: 18px;
-}
-
-.mensaje-api {
-    color: #B8B8B8;
-    text-align: center;
-}
-
-/* =========================================
-   MODAL DE JUEGOS
-   ========================================= */
-
-.modal-juego {
+.modal-producto {
     position: fixed;
     inset: 0;
     z-index: 9999;
@@ -357,7 +356,8 @@
     overflow-y: auto;
 }
 
-.modal-juego-contenido {
+/* Contenido central del modal. */
+.modal-producto-contenido {
     position: relative;
     width: min(650px, 95vw);
     max-height: 90vh;
@@ -369,10 +369,11 @@
     color: #FFFFFF;
     text-align: center;
     box-shadow: 0 0 30px rgba(108, 43, 255, 0.45);
-    animation: aparecer-modal 0.25s ease;
+    animation: aparecer-modal-producto 0.25s ease;
 }
 
-.modal-juego-contenido img {
+/* Imagen del modal. */
+.modal-producto-contenido img {
     width: 100%;
     max-width: 520px;
     height: 300px;
@@ -381,24 +382,15 @@
     border-radius: 7px;
 }
 
-.modal-juego-contenido h2 {
+/* Título del modal. */
+.modal-producto-contenido h2 {
     margin: 18px 0 10px;
     color: #FFFFFF;
     font-size: 24px;
 }
 
-.modal-juego-contenido .modal-plataforma {
-    display: inline-block;
-    margin-bottom: 15px;
-    padding: 5px 10px;
-    background-color: #6C2BFF;
-    color: #FFFFFF;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.modal-juego-contenido .modal-descripcion {
+/* Descripción del modal. */
+.modal-producto-contenido .modal-descripcion-producto {
     max-width: 560px;
     margin: 15px auto;
     color: #B8B8B8;
@@ -406,35 +398,16 @@
     line-height: 1.5;
 }
 
-.modal-juego-contenido .modal-precio {
+/* Precio del modal. */
+.modal-producto-contenido .modal-precio-producto {
     margin-top: 18px;
     color: #FF2BD6;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
-.modal-juego-contenido .precio-anterior {
-    color: #777777;
-    font-size: 13px;
-    text-decoration: line-through;
-}
-
-.modal-juego-contenido .descuento {
-    display: inline-block;
-    margin: 0 6px;
-    padding: 3px 6px;
-    background-color: #FF2BD6;
-    color: #0D0D0D;
-    border-radius: 4px;
-    font-size: 10px;
-}
-
-.modal-juego-contenido .precio-oferta {
-    color: #FF2BD6;
-    font-size: 20px;
-}
-
-.modal-juego-cerrar {
+/* Botón para cerrar el modal. */
+.modal-producto-cerrar {
     position: absolute;
     top: 10px;
     right: 12px;
@@ -453,12 +426,13 @@
             box-shadow 0.2s ease;
 }
 
-.modal-juego-cerrar:hover {
+.modal-producto-cerrar:hover {
     transform: scale(1.08);
     box-shadow: 0 0 10px rgba(255, 43, 214, 0.5);
 }
 
-@keyframes aparecer-modal {
+/* Animación de aparición del modal. */
+@keyframes aparecer-modal-producto {
     from {
         opacity: 0;
         transform: scale(0.92);
@@ -472,19 +446,19 @@
 
 /* Responsive del modal. */
 @media (max-width: 600px) {
-    .modal-juego {
+    .modal-producto {
         padding: 10px;
     }
 
-    .modal-juego-contenido {
+    .modal-producto-contenido {
         padding: 20px 15px;
     }
 
-    .modal-juego-contenido img {
+    .modal-producto-contenido img {
         height: 220px;
     }
 
-    .modal-juego-contenido h2 {
+    .modal-producto-contenido h2 {
         font-size: 20px;
     }
 }
@@ -510,7 +484,7 @@
             0 0 30px rgba(255, 43, 214, 0.4);
 }
 
-/* Oculta elementos controlados mediante JavaScript. */
+/* Oculta elementos controlados por JavaScript. */
 .oculto {
     display: none !important;
 }
@@ -578,7 +552,7 @@
     white-space: nowrap;
 }
 
-/* Resumen del carrito. */
+/* Resumen del total. */
 .resumen-carrito {
     display: flex;
     align-items: center;
@@ -597,73 +571,6 @@
     font-size: 1.2rem;
 }
 
-/* =========================================
-   CARRITO MINIMIZADO
-   ========================================= */
-
-.btn-carrito-minimizado {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    z-index: 2001;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 65px;
-    height: 65px;
-    padding: 0;
-    background: rgba(10, 10, 20, 0.97);
-    border: 2px solid #FF2BD6;
-    border-radius: 50%;
-    color: #FF2BD6;
-    font-size: 1.7rem;
-    cursor: pointer;
-    box-shadow:
-            0 0 10px rgba(255, 43, 214, 0.7),
-            0 0 25px rgba(255, 43, 214, 0.4);
-    transition: all 0.3s ease;
-}
-
-.btn-carrito-minimizado:hover {
-    background: #FF2BD6;
-    color: #111111;
-    transform: scale(1.08);
-    box-shadow:
-            0 0 15px #FF2BD6,
-            0 0 30px #FF2BD6;
-}
-
-/* Contador del carrito. */
-#cantidad-carrito {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    background: #FF2BD6;
-    border-radius: 50%;
-    color: #111111;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-/* Responsive del carrito. */
-@media (max-width: 576px) {
-    .carrito-flotante {
-        right: 10px;
-        bottom: 10px;
-        width: calc(100% - 20px);
-        max-height: 400px;
-    }
-
-    .btn-carrito-minimizado {
-        right: 15px;
-        bottom: 15px;
-    }
-}
 
 /* Información del producto y botón para eliminarlo. */
 .info-producto-carrito {
@@ -697,8 +604,6 @@
     color: #0D0D0D;
 }
 
-
-
 /* Botones del carrito */
 .btn-ir-pagar,
 .btn-limpiar-carrito {
@@ -724,4 +629,71 @@
 .btn-limpiar-carrito:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 12px rgba(255, 43, 214, 0.4);
+}
+
+/*  CARRITO MINIMIZADO  */
+
+.btn-carrito-minimizado {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    padding: 0;
+    background: rgba(10, 10, 20, 0.97);
+    border: 2px solid #FF2BD6;
+    border-radius: 50%;
+    color: #FF2BD6;
+    font-size: 1.7rem;
+    cursor: pointer;
+    box-shadow:
+            0 0 10px rgba(255, 43, 214, 0.7),
+            0 0 25px rgba(255, 43, 214, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-carrito-minimizado:hover {
+    background: #FF2BD6;
+    color: #111111;
+    transform: scale(1.08);
+    box-shadow:
+            0 0 15px #FF2BD6,
+            0 0 30px #FF2BD6;
+}
+
+/* Contador de productos del carrito. */
+#cantidad-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: #FF2BD6;
+    border-radius: 50%;
+    color: #111111;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/*  RESPONSIVE - CARRITO  */
+
+@media (max-width: 576px) {
+    .carrito-flotante {
+        right: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        max-height: 400px;
+    }
+
+    .btn-carrito-minimizado {
+        right: 15px;
+        bottom: 15px;
+    }
 }

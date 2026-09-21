@@ -1,32 +1,41 @@
 [
   {
+    "id": 1,
     "nombre": "The Legend of Zelda: Tears of the Kingdom",
     "plataforma": "Nintendo Switch",
-    "precio": "$42.490",
-    "descripcion": "Una gran aventura de exploración y descubrimiento en Hyrule.",
-    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GW6-EVZcN9ilJVxquL890ravy2187EPN6MTpKkUFZw&s=10",
+    "categoria": "Videojuegos",
+    "genero": "Aventura",
     "precioAnterior": "$49.990",
+    "precioOferta": "$42.490",
     "descuento": "15% OFF",
-    "precioOferta": "$42.490"
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5GW6-EVZcN9ilJVxquL890ravy2187EPN6MTpKkUFZw&s=10",
+    "descripcion": "Aventura y exploración en el mundo de Hyrule.",
+    "stock": 8
   },
   {
+    "id": 2,
     "nombre": "EA Sports FC",
     "plataforma": "PS5",
-    "precio": "$33.990",
-    "descripcion": "Disfruta de partidos y competencias con tus equipos favoritos.",
-    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwOtZQhGp2dfJ1_Kabe175o7b8mmj2vopVGp2xyr8A2SyHlwHxfftKxUQ&s=10",
+    "categoria": "Videojuegos",
+    "genero": "Deportes",
     "precioAnterior": "$39.990",
+    "precioOferta": "$33.990",
     "descuento": "15% OFF",
-    "precioOferta": "$33.990"
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwOtZQhGp2dfJ1_Kabe175o7b8mmj2vopVGp2xyr8A2SyHlwHxfftKxUQ&s=10",
+    "descripcion": "Disfruta de una experiencia de fútbol con equipos y jugadores reconocidos.",
+    "stock": 12
   },
   {
+    "id": 3,
     "nombre": "Minecraft",
     "plataforma": "PS5",
-    "precio": "$25.490",
-    "descripcion": "Construye, explora y sobrevive en un mundo lleno de posibilidades.",
-    "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202407/0401/670c294ded3baf4fa11068db2ec6758c63f7daeb266a35a1.png?w=440",
+    "categoria": "Videojuegos",
+    "genero": "Aventura",
     "precioAnterior": "$29.990",
+    "precioOferta": "$25.490",
     "descuento": "15% OFF",
-    "precioOferta": "$25.490"
+    "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202407/0401/670c294ded3baf4fa11068db2ec6758c63f7daeb266a35a1.png?w=440",
+    "descripcion": "Construye, explora y sobrevive en un mundo lleno de posibilidades.",
+    "stock": 15
   }
 ]
